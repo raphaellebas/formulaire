@@ -7,28 +7,27 @@
     <meta name="author" content="Raphaël lebas">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!--<link rel="stylesheet" href="/assets/css/style.css">-->
-    <title>Formulaire d'inscrition</title>
+    <title>Formulaire d'inscription</title>
 </head>
 <body>
     <h1>Formulaire d'inscrition</h1>
     <p>Remplissez soigneusement le formulaire</p>
 
-    <form action="" method="GET" class="form-signup">
+    <form action="/action-page.php" method="GET" class="form-signup">
         <p>Nom complet</p>
-        <label hidden for="firstname">Prénom</label>
+        <label for="firstname">Prénom</label>
         <input type="text" id="firstname" name="firstname" pattern="[a-zA-ZÀ-ÿ].{2,}" title="Veuillez mettre au moins 3 caractères ou plus seulement les lettres sont autorisées" placeholder="Prénom" required>
         
-        <label hidden for="lastname">Nom</label>
+        <label for="lastname">Nom</label>
         <input type="text" id="lastname" name="lastname"  pattern="[a-zA-ZÀ-ÿ].{2,}" title="Veuillez mettre au moins 3 caractères ou plus seulement les lettres sont autorisées" placeholder="Nom"  required>
         
-        <p>Date de naissance</p>
-        <label hidden for="birthday">Date de naissance</label>
+        <label  for="birthday">Date de naissance</label>
         <input type="date" id="birthday" name="birthday"  pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" min="1903-01-01" max="2021-12-21" required>
         
-        <label hidden for="years"></label>
+        <label for="years">Âge</label>
         <input type="number" id="years" name="years" max="118" placeholder="Âge" required/>
         
-        <label hidden for="choice-sex">Sexe</label>
+        <label for="choice-sex">Sexe</label>
         <select name="sex" id="sex" required>
             <option value="">Civilité</option>
             <option value="female">Femme</option>
@@ -37,21 +36,20 @@
             <option value="other">Autre</option>
         </select>
 
-        <label for="choice-nationality"></label>
+        <label for="choice-nationality">Nationalité</label>
         <input list="nationality" id="choice-nationality" name="choice-nationality" placeholder="Veuillez choisir votre nationalité" required>
         <datalist id="nationality" >
             <option value="Française"></option>
             <option value="Anglaise"></option>
             <option value="Espagnol"></option>
-            <option value="Arabe"></option>
+            <option value="Algérienne"></option>
             <option value="Italienne"></option>
         </datalist>
 
-        <p>Adresse</p>
-        <label hidden for="adress">Adresse</label>
+        <label  for="adress">Adresse</label>
         <input type="textarea" id="adress" name="adress" placeholder="Adresse" required>
 
-        <label hidden for="citys">Ville</label>
+        <label for="citys">Ville</label>
         <input list="city" id="citys" name="city" placeholder="Ex: La-Forêt-Fouesnant" required>
         <datalist id="city">
             <option value="Tourcoing"></option>
@@ -66,14 +64,14 @@
             <option value="Brest"></option>
         </datalist>
 
-        <label hidden for="zip-code">code postal</label>
+        <label  for="zip-code">code postal</label>
         <input type="text" id="zip-code" name="zip-code" placeholder="ex: 75000" pattern="[0-9]{5}" title="Vous devez insérer 5 chiffres pour le code postal." required>
 
         <p>Autre informations</p>
-        <label hidden for="mail"></label>
+        <label  for="mail"></label>
         <input type="email" id="mail" name="mail" placeholder="Ex: Exemple@gmail.com" pattern=".+@gmail\.com|.+@outlook\.com|.+gmail\.com|.+outlook\.fr" title="Seulement les domaines gmail.com/gmail.fr Outlook.com/outlook.fr sont autorisées" required>
         
-        <label hidden for="choice-work">work</label>
+        <label  for="choice-work">work</label>
         <input list="work" id="choice-work" name="choice-work" placeholder="Quelle est votre métier ?" required>
         <datalist id="work">
             <option value="Au chômage"></option>
@@ -83,11 +81,25 @@
             <option value="Pêcheur"></option>
         </datalist>
 
-        <label hidden for=""></label>
+        <label  for="Pays de naissance">Pays de naissance</label>
+        <input list="native-country" id="native-countrys" name="native-countrys" placeholder="Quelle est votre pays de naissance ?" required>
+        <datalist id="native-country">
+            <option value="France"></option>
+            <option value="Royaume-unis"></option>
+            <option value="Espagne"></option>
+            <option value="Algérie"></option>
+            <option value="Italie"></option>
+        </datalist>
 
-        <input type="submit" value="S'inscrire">
-       
+    <label for="security-social">Securité social</label>
+    <input type="text" id="security-social" name="security-social" placeholder="Numéro de sécurité social" pattern="[0-9]{13}" title="Veuillez bien rentrer les 13 chiffres" required>
     
+    <label for="passport-issuance">Date de délivrance du passeport</label>
+    <input type="month" id="passport-issuance" name="passport-issuance" value="2020-08" required> <!--Pour changer le code j'ai utiliser le type="month" à la place de date-->
+
+    <label for="expiration-date">Date d'expiration du passeport</label>
+    <input type="month" id="expiration-date" name="expiration-date" min="2012-01" max="2022-01" value="2021-01">
+    <input type="submit" value="S'inscrire">
     </form>
 </body>
 </html>
