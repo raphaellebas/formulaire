@@ -30,7 +30,7 @@
         
         <label hidden for="choice-sex">Sexe</label>
         <select name="sex" id="sex" required>
-            <option value="">Veuillez choisir votre sexe</option>
+            <option value="">Civilité</option>
             <option value="female">Femme</option>
             <option value="male">Homme</option>
             <option value="Non-binary">Non-binaire</option>
@@ -71,9 +71,23 @@
 
         <p>Autre informations</p>
         <label hidden for="mail"></label>
-        <input type="email" id="mail" name="mail" placeholder="Ex: Exemple@gmail.com" pattern=".+@gmail\.com|.+@outlook\.com|.+gmail\.com|.+outlook\.fr" title="Seulement les domaines Google.com ou et Outlook.com ou .frsont autorisées" required>
+        <input type="email" id="mail" name="mail" placeholder="Ex: Exemple@gmail.com" pattern=".+@gmail\.com|.+@outlook\.com|.+gmail\.com|.+outlook\.fr" title="Seulement les domaines gmail.com/gmail.fr Outlook.com/outlook.fr sont autorisées" required>
+        
+        <label hidden for="choice-work">work</label>
+        <input list="work" id="choice-work" name="choice-work" placeholder="Quelle est votre métier ?" required>
+        <datalist id="work">
+            <option value="Au chômage"></option>
+            <option value="Développeur"></option>
+            <option value="Data Analyste"></option>
+            <option value="Boulanger"></option>
+            <option value="Pêcheur"></option>
+        </datalist>
+
+        <label hidden for=""></label>
+
         <input type="submit" value="S'inscrire">
        
+        
     
     </form>
 </body>
