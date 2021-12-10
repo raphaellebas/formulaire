@@ -10,88 +10,93 @@
     <title>Formulaire d'inscription</title>
 </head>
 <body>
-    <h1>Formulaire d'inscrition</h1>
+    <h1>Lua Agency</h1>
+    <img src="https://github.com/raphaellebas/formulaire/blob/Origin/assets/img/lua.png?raw=true" alt="Lua Icon">
+    <h2>Formulaire d'inscrition</h2>
     <p>Remplissez soigneusement le formulaire</p>
 
     <form action="/action-page.php" method="GET" class="form-signup">
-        <p>Nom complet</p>
-        <label for="firstname">Prénom</label>
-        <input type="text" id="firstname" name="firstname" pattern="[a-zA-ZÀ-ÿ].{2,}" title="Veuillez mettre au moins 3 caractères ou plus seulement les lettres sont autorisées" placeholder="Prénom"  required>
+        <div>      
+            <p>Nom complet</p>
+            <label for="firstname">Prénom</label>
+            <input type="text" id="firstname" name="firstname" pattern="[a-zA-ZÀ-ÿ]{3,25}" title="Veuillez mettre au moins 3 caractères ou plus seulement les lettres sont autorisées" placeholder="Prénom"  required>
+            
+            <label for="lastname">Nom</label>
+            <input type="text" id="lastname" name="lastname"  pattern="[a-zA-ZÀ-ÿ].{3,25}" title="Veuillez mettre au moins 3 caractères ou plus seulement les lettres sont autorisées" placeholder="Nom"  required>
+        </div>
+        <div>
+            <label  for="birthday">Date de naissance</label>
+            <input type="date" id="birthday" name="birthday" min="1903-01-01" max="2021-12-21" required>
+            
+            <label for="years">Âge</label>
+            <input type="number" id="years" name="years" max="118" placeholder="Âge" required/>
+            
+            <label for="sex">Sexe</label>
+            <select name="sex" id="sex" required>
+                <option value="">Civilité</option>
+                <option value="female">Femme</option>
+                <option value="male">Homme</option>
+                <option value="Non-binary">Non-binaire</option>
+                <option value="other">Autre</option>
+            </select>
+    
+            <label for="nationality">Nationalité</label>
+            <select id="nationality" required >
+                <option value="default">Nationalité</option>
+                <option value="Française">Française</option>
+                <option value="Anglaise">Anglaise</option>
+                <option value="Espagnol">Espagnol</option>
+                <option value="Algérienne">Algérienne</option>
+                <option value="Italienne">Italienne</option>
+            </select>
+            </div>
         
-        <label for="lastname">Nom</label>
-        <input type="text" id="lastname" name="lastname"  pattern="[a-zA-ZÀ-ÿ].{2,}" title="Veuillez mettre au moins 3 caractères ou plus seulement les lettres sont autorisées" placeholder="Nom"  required>
+        <div>
+        <p>Autre informations</p>
+       
+            <label  for="adress">Adresse</label>
+            <input type="text" id="adress" name="adress" placeholder="Adresse" required>
+
+            <label for="city">Ville</label>
+            <select id="city" required >
+                <option value="Tourcoing">Tourcoing</option>
+                <option value="Lille">Lille</option>
+                <option value="Paris">Paris</option>
+                <option value="Quimper">Quimper</option>
+                <option value="Marseille">Marseille</option>
+                <option value="Boulogne-Sur-Mer">Boulogne-Sur-Mer</option>
+                <option value="Lyon">Lyon</option>
+                <option value="Strasbourg">Strasbourg</option>
+                <option value="La-Forêt-Fouesnant">La-Forêt-Fouesnant</option>
+                <option value="Brest">Brest</option>
+            </select>
+
+            <label  for="zip-code">Code postal</label>
+            <input type="text" id="zip-code" name="zip-code" placeholder="ex: 75000" pattern="[0-9]{5}" title="Vous devez insérer 5 chiffres pour le code postal." required>
+        </div>
+        <div>
+        <label  for="mail">Email</label>
+        <input type="email" id="mail" name="mail" placeholder="Ex: Exemple@gmail.com" pattern=".+@gmail\.com|.+@outlook\.com|.+outlook\.fr" title="Seulement les domaines gmail.com ou Outlook.com/outlook.fr sont autorisées" required>
         
-        <label  for="birthday">Date de naissance</label>
-        <input type="date" id="birthday" name="birthday" min="1903-01-01" max="2021-12-21" required>
-        
-        <label for="years">Âge</label>
-        <input type="number" id="years" name="years" max="118" placeholder="Âge" required/>
-        
-        <label for="sex">Sexe</label>
-        <select name="sex" id="sex" required>
-            <option value="">Civilité</option>
-            <option value="female">Femme</option>
-            <option value="male">Homme</option>
-            <option value="Non-binary">Non-binaire</option>
-            <option value="other">Autre</option>
+        <label  for="work">Votre situation professionnelle</label>
+        <select id="work" required>
+            <option value="Au chômage">Au Chômage</option>
+            <option value="Développeur">Développeur</option>
+            <option value="Data Analyste">Data Analyste</option>
+            <option value="Boulanger">Boulanger</option>
+            <option value="Pêcheur">Pêcheur</option>
         </select>
 
-        <label for="choice-nationality">Nationalité</label>
-        <input list="nationality" id="choice-nationality" name="choice-nationality" placeholder="Veuillez choisir votre nationalité" required>
-        <datalist id="nationality" >
-            <option value="Française"></option>
-            <option value="Anglaise"></option>
-            <option value="Espagnol"></option>
-            <option value="Algérienne"></option>
-            <option value="Italienne"></option>
-        </datalist>
-
-
-        <label  for="adress">Adresse</label>
-        <input type="text" id="adress" name="adress" placeholder="Adresse" required>
-
-        <label for="citys">Ville</label>
-        <input list="city" id="citys" name="city" placeholder="Ex: La-Forêt-Fouesnant" required>
-        <datalist id="city">
-            <option value="Tourcoing"></option>
-            <option value="Lille"></option>
-            <option value="Paris"></option>
-            <option value="Quimper"></option>
-            <option value="Marseille"></option>
-            <option value="Boulogne-Sur-Mer"></option>
-            <option value="Lyon"></option>
-            <option value="Strasbourg"></option>
-            <option value="La-Forêt-Fouesnant"></option>
-            <option value="Brest"></option>
-        </datalist>
-
-        <label  for="zip-code">code postal</label>
-        <input type="text" id="zip-code" name="zip-code" placeholder="ex: 75000" pattern="[0-9]{5}" title="Vous devez insérer 5 chiffres pour le code postal." required>
-
-        <p>Autre informations</p>
-        <label  for="mail"></label>
-        <input type="email" id="mail" name="mail" placeholder="Ex: Exemple@gmail.com" pattern=".+@gmail\.com|.+@outlook\.com|.+gmail\.com|.+outlook\.fr" title="Seulement les domaines gmail.com/gmail.fr Outlook.com/outlook.fr sont autorisées" required>
-        
-        <label  for="choice-work">work</label>
-        <input list="work" id="choice-work" name="choice-work" placeholder="Quelle est votre métier ?" required>
-        <datalist id="work">
-            <option value="Au chômage"></option>
-            <option value="Développeur"></option>
-            <option value="Data Analyste"></option>
-            <option value="Boulanger"></option>
-            <option value="Pêcheur"></option>
-        </datalist>
-
-        <label for="native-countrys">Pays de naissance</label>
-        <input list="native-country" id="native-countrys" name="native-countrys" placeholder="Quelle est votre pays de naissance ?" required>
-        <datalist id="native-country">
-            <option value="France"></option>
-            <option value="Royaume-unis"></option>
-            <option value="Espagne"></option>
-            <option value="Algérie"></option>
-            <option value="Italie"></option>
-        </datalist>
-
+        <label for="native-country">Pays de naissance</label>
+        <select id="native-country" required>
+            <option value="France">France</option>
+            <option value="Royaume-unis">Royaume-unis</option>
+            <option value="Espagne">Espagne</option>
+            <option value="Algérie">Algérie</option>
+            <option value="Italie">Italie</option>
+        </select>
+        </div>
+    <div>
     <label for="security-social">Securité social</label>
     <input type="text" id="security-social" name="security-social" placeholder="Numéro de sécurité social" pattern="[0-9]{13}" title="Veuillez bien rentrer les 13 chiffres" required>
     
@@ -99,7 +104,8 @@
     <input type="month" id="passport-issuance" name="passport-issuance" value="2020-08" required> <!--Pour changer le code j'ai utiliser le type="month" à la place de date-->
 
     <label for="expiration-date">Date d'expiration du passeport</label>
-    <input type="month" id="expiration-date" name="expiration-date" min="2012-01" max="2022-01" value="2021-01">
+    <input type="month" id="expiration-date" name="expiration-date" min="2012-01" max="2032-01" value="2021-01">
+    </div>
     <input type="submit" value="S'inscrire">
     </form>
 </body>
