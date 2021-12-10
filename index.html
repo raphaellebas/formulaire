@@ -18,6 +18,7 @@
     <form action="/action-page.php" method="GET" class="form-signup">
         <div>      
             <p>Nom complet</p>
+
             <label for="firstname">Prénom</label>
             <input type="text" id="firstname" name="firstname" pattern="[a-zA-ZÀ-ÿ]{3,25}" title="Veuillez mettre au moins 3 caractères ou plus seulement les lettres sont autorisées" placeholder="Prénom"  required>
             
@@ -54,8 +55,8 @@
         <div>
         <p>Autre informations</p>
        
-            <label  for="adress">Adresse postale</label>
-            <input type="text" id="adress" name="adress" pattern="[a-zA-ZÀ-ÿ0-9]" title="Veuillez entrer une bonne adresse et dans le bon format." required>
+        <label  for="adress">Adresse postale</label>
+        <input type="text" id="adress" name="adress" pattern="[A-Za-z0-9\s]+" title="Veuillez entrer une bonne adresse et dans le bon format." placeholder="Votre adresse postale" required>
 
             <label for="city">Ville</label>
             <select id="city" required >
