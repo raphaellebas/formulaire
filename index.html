@@ -22,14 +22,14 @@
             <input type="text" id="firstname" name="firstname" pattern="[a-zA-ZÀ-ÿ]{3,25}" title="Veuillez mettre au moins 3 caractères ou plus seulement les lettres sont autorisées" placeholder="Prénom"  required>
             
             <label for="lastname">Nom</label>
-            <input type="text" id="lastname" name="lastname"  pattern="[a-zA-ZÀ-ÿ].{3,25}" title="Veuillez mettre au moins 3 caractères ou plus seulement les lettres sont autorisées" placeholder="Nom"  required>
+            <input type="text" id="lastname" name="lastname"  pattern="[a-zA-ZÀ-ÿ]{3,25}" title="Veuillez mettre au moins 3 caractères ou plus seulement les lettres sont autorisées" placeholder="Nom"  required>
         </div>
         <div>
             <label  for="birthday">Date de naissance</label>
             <input type="date" id="birthday" name="birthday" min="1903-01-01" max="2021-12-21" required>
             
             <label for="years">Âge</label>
-            <input type="number" id="years" name="years" max="118" placeholder="Âge" required/>
+            <input type="number" id="years" name="years" min="13" max="118" placeholder="Âge" required/>
             
             <label for="sex">Sexe</label>
             <select name="sex" id="sex" required>
@@ -104,10 +104,10 @@
     <input type="text" id="security-social" name="security-social" placeholder="Numéro de sécurité social" pattern="[0-9]{13}" title="Veuillez bien rentrer les 13 chiffres" required>
     
     <label for="passport-issuance">Date de délivrance du passeport</label>
-    <input type="month" id="passport-issuance" name="passport-issuance" value="2020-08" required> <!--Pour changer le code j'ai utiliser le type="month" à la place de date-->
+    <input type="month" id="passport-issuance" name="passport-issuance" value="" required> <!--Pour changer le code j'ai utiliser le type="month" à la place de date-->
 
     <label for="expiration-date">Date d'expiration du passeport</label>
-    <input type="month" id="expiration-date" name="expiration-date" min="2012-01" max="2032-01" value="2021-01">
+    <input type="month" id="expiration-date" name="expiration-date" min="2012-01" max="2032-01" value="" required>
     </div>
     <input type="submit" value="S'inscrire">
     </form>
