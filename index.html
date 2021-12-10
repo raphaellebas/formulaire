@@ -29,7 +29,7 @@
             <input type="date" id="birthday" name="birthday" min="1903-01-01" max="2008-12-21" required>
             
             <label for="years">Âge</label>
-            <input type="number" id="years" name="years" min="13" max="118" placeholder="Âge" required/>
+            <input type="number" id="years" name="years" min="13" max="118" maxlength="3" placeholder="Âge" required/>
             
             <label for="sex">Sexe</label>
             <select name="sex" id="sex" required>
@@ -54,8 +54,8 @@
         <div>
         <p>Autre informations</p>
        
-            <label  for="adress">Adresse</label>
-            <input type="text" id="adress" name="adress" required>
+            <label  for="adress">Adresse postale</label>
+            <input type="text" id="adress" name="adress" pattern="[a-zA-ZÀ-ÿ0-9]" titre="Veuillez entrer une bonne adresse et dans le bon format." required>
 
             <label for="city">Ville</label>
             <select id="city" required >
